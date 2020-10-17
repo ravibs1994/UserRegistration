@@ -16,5 +16,14 @@ if [[ $pat =~ $lName ]]
     else
         echo "Invalid"
 fi
+#Email Validation
+read -p "Enter Email " email
+patEmail='^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-z]{2,3}([.][a-z]{2,3})*([,])?$'
+if [[ $patEmail =~ $email ]]
+    then
+        echo "Valid"
+    else
+        echo "Invalid"
+fi
 
 
