@@ -25,5 +25,14 @@ if [[ $patEmail =~ $email ]]
     else
         echo "Invalid"
 fi
+#Mobile Number Validation
+read -p "Enter Mobile number " mobNumber
+patMobNumber='^((\+){1}91){1}[ -]?[0-9]{10}$'
+if [[ $patMobNumber =~ $mobNumber ]]
+    then
+        echo "Valid"
+    else
+        echo "Invalid"
+fi
 
 
