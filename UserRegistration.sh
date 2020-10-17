@@ -34,5 +34,14 @@ if [[ $patMobNumber =~ $mobNumber ]]
     else
         echo "Invalid"
 fi
+#Password Validation Rule 1
+read -p "Enter Password " pwd
+pwdPat='^(?=.*[a-zA-Z]).{8,}$'
+if [[ $pwdPat =~ $pwd ]]
+    then
+        echo "Valid"
+    else
+        echo "Invalid"
+fi
 
 
