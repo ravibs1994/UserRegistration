@@ -44,4 +44,17 @@ if [[ $pwdPat =~ $pwd ]]
         echo "Invalid"
 fi
 
-
+#Validate all Email Samples
+i=1;
+while [ i -le 8 ]
+   do
+     read -p "Enter Email Samples one by one $i " emailSample
+     patEmail='^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-z]{2,3}([.][a-z]{2,3})*([,])?$'
+     if [[ $patEmail =~ $emailSample ]]
+       then
+         echo "Valid"
+     else
+         echo "Invalid"
+    fi
+     ((i++))
+   done
